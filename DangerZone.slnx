@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="DangerZone.Client/DangerZone.Client.csproj" />
+  <Project Path="DangerZone/DangerZone.csproj" />
+</Solution>
