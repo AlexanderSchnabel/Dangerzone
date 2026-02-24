@@ -1,5 +1,15 @@
 ﻿@inherits LayoutComponentBase
 
+@* Required *@
+<MudThemeProvider Theme="@(_myCustomTheme)" />
+<MudPopoverProvider />
+
+@* Needed for dialogs *@
+<MudDialogProvider />
+
+@* Needed for snackbars *@
+<MudSnackbarProvider />
+
 <div class="page">
     <div class="sidebar">
         <NavMenu />
@@ -21,3 +31,18 @@
     <a href="." class="reload">Reload</a>
     <span class="dismiss">🗙</span>
 </div>
+
+@code {
+
+    private readonly MudTheme _myCustomTheme = new()
+    {
+        Typography = new Typography
+        {
+            Default = new DefaultTypography
+            {
+                FontFamily = ["Montserrat", "Poppins", "Helvetica", "Arial", "sans-serif"]
+            }
+        }
+    };
+
+}

@@ -1,0 +1,24 @@
+﻿@inherits LayoutComponentBase
+
+@* Required *@
+<MudThemeProvider Theme="@(_myCustomTheme)" />
+<MudPopoverProvider />
+
+<div class="layout-background">
+    @(Body)
+</div>
+
+@code {
+
+    private readonly MudTheme _myCustomTheme = new()
+    {
+        Typography = new Typography
+        {
+            Default = new DefaultTypography
+            {
+                FontFamily = ["Montserrat", "Poppins", "Helvetica", "Arial", "sans-serif"]
+            }
+        }
+    };
+
+}
