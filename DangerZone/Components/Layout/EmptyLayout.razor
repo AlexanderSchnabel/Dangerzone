@@ -1,6 +1,23 @@
-﻿@using MudBlazor
-@inherits LayoutComponentBase
+﻿@inherits LayoutComponentBase
+
+@* Required *@
+<MudThemeProvider Theme="@(_myCustomTheme)" />
+<MudPopoverProvider />
 
 <div class="layout-background">
     @(Body)
 </div>
+
+@code{
+    MudTheme _myCustomTheme = new()
+        {
+            Typography = new Typography
+            {
+                Default = new DefaultTypography
+                {
+                FontFamily = ["Montserrat", "Poppins", "Helvetica", "Arial", "sans-serif"]
+                }
+            }
+        };
+
+}
