@@ -8,16 +8,17 @@
     @(Body)
 </div>
 
-@code{
-    MudTheme _myCustomTheme = new()
+@code {
+
+    private readonly MudTheme _myCustomTheme = new()
+    {
+        Typography = new Typography
         {
-            Typography = new Typography
+            Default = new DefaultTypography
             {
-                Default = new DefaultTypography
-                {
                 FontFamily = ["Montserrat", "Poppins", "Helvetica", "Arial", "sans-serif"]
-                }
             }
-        };
+        }
+    };
 
 }

@@ -1,7 +1,8 @@
 .layout-background {
     min-height: 100vh;
     background-image: url("/img/background.png");
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-color: #121212;
 }
