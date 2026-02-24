@@ -18,34 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 15,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "DangerZone",
-              "DocumentMoniker": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\DangerZone.csproj",
-              "RelativeDocumentMoniker": "DangerZone\\DangerZone.csproj",
-              "ToolTip": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\DangerZone.csproj",
-              "RelativeToolTip": "DangerZone\\DangerZone.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2026-02-24T09:53:21.068Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "List.razor",
-              "DocumentMoniker": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\Components\\Pages\\List.razor",
-              "RelativeDocumentMoniker": "DangerZone\\Components\\Pages\\List.razor",
-              "ToolTip": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\Components\\Pages\\List.razor",
-              "RelativeToolTip": "DangerZone\\Components\\Pages\\List.razor",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2026-02-24T09:51:25.853Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
@@ -101,6 +75,32 @@
             {
               "$type": "Bookmark",
               "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DangerZone",
+              "DocumentMoniker": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\DangerZone.csproj",
+              "RelativeDocumentMoniker": "DangerZone\\DangerZone.csproj",
+              "ToolTip": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\DangerZone.csproj",
+              "RelativeToolTip": "DangerZone\\DangerZone.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-24T09:53:21.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "List.razor",
+              "DocumentMoniker": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\Components\\Pages\\List.razor",
+              "RelativeDocumentMoniker": "DangerZone\\Components\\Pages\\List.razor",
+              "ToolTip": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\Components\\Pages\\List.razor",
+              "RelativeToolTip": "DangerZone\\Components\\Pages\\List.razor",
+              "ViewState": "AgIAAHgAAAAAAAAAAAAAAIEAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-24T09:51:25.853Z",
+              "EditorCaption": ""
             }
           ]
         }
