@@ -1,136 +1,55 @@
 ﻿@page "/events"
-@using MudBlazor
+
+@inject NavigationManager Nav
 
 <PageTitle>Event List</PageTitle>
 
-<h1>Events</h1>
+<h3>Events</h3>
 
-<MudCard>
-    <MudCardMedia Image="img/shark.png" Height="200" Style="background-size: contain;" />
-    <MudCardContent>
-        <MudText Typo="Typo.h5">The Chum Line</MudText>
-        <MudText Typo="Typo.body2">Free-diving with Great Whites in open water (no cage).</MudText>
-        <MudText Typo="Typo.body2">9/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+@foreach (var ev in _events)
+{
+    <MudLink Href="@($"/events/{ev.Id}")" Underline="@(Underline.None)">
+        <MudPaper Class="pa-3" Elevation="2" Style="cursor:pointer;">
 
-<MudCard>
-    <MudCardMedia Image="img/vulcano.png" Height="200" Style="background-size: contain;" />
-    <MudCardContent>
-        <MudText Typo="Typo.h5">Magma Walk</MudText>
-        <MudText Typo="Typo.body2">High-altitude trekking across active lava crusts in the Danakil Depression.</MudText>
-        <MudText Typo="Typo.body2">7/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+            <MudStack Row="true" Spacing="3" AlignItems="AlignItems.Center">
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">The Abyss</MudText>
-        <MudText Typo="Typo.body2">Solo kayaking through a Grade VI rapid system in the Congo.</MudText>
-        <MudText Typo="Typo.body2">8.5/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+                <!-- Image (Left) -->
+                <MudImage Src="@ev.ImageUrl"
+                          Alt="@ev.Title"
+                          Width="160"
+                          Height="110"
+                          Style="object-fit:cover; border-radius:8px;"/>
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">Zone of Silence</MudText>
-        <MudText Typo="Typo.body2">72-hour solo survival in the Sahara with only a knife and 1L of water.</MudText>
-        <MudText Typo="Typo.body2">8/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+                <!-- Text (Right) -->
+                <MudStack Spacing="1">
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">The HALO Jump</MudText>
-        <MudText Typo="Typo.body2">30,000ft military-grade high-altitude jump over a remote glacier.</MudText>
-        <MudText Typo="Typo.body2">6/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+                    <MudText Typo="Typo.h6">
+                        @ev.Title
+                    </MudText>
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">Spider’s Silk</MudText>
-        <MudText Typo="Typo.body2">Free-solo climbing (no ropes) on 200ft limestone cliffs in Thailand.</MudText>
-        <MudText Typo="Typo.body2">10/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+                    <MudText Typo="Typo.body2" Color="Color.Secondary">
+                        @ev.Description
+                    </MudText>
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">The Cyclone</MudText>
-        <MudText Typo="Typo.body2">Storm-chasing by motorcycle in the heart of Tornado Alley.</MudText>
-        <MudText Typo="Typo.body2">7.5/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+                </MudStack>
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">Black Ice</MudText>
-        <MudText Typo="Typo.body2">Deep-sea cave diving in unmapped subterranean Arctic tunnels.</MudText>
-        <MudText Typo="Typo.body2">9.5/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+            </MudStack>
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">The DMZ Run</MudText>
-        <MudText Typo="Typo.body2">Stealth-based "extraction" roleplay in active geopolitical high-risk zones.</MudText>
-        <MudText Typo="Typo.body2">8/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+        </MudPaper>
+    </MudLink>
+}
 
-<MudCard>
-    @* <MudCardMedia Image="images/door.jpg" Height="200" /> *@
-    <MudCardContent>
-        <MudText Typo="Typo.h5">Orbital Re-entry</MudText>
-        <MudText Typo="Typo.body2">Sub-orbital flight in an experimental craft with manual controls.</MudText>
-        <MudText Typo="Typo.body2">??/10</MudText>
-    </MudCardContent>
-    @*  <MudCardActions>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Share</MudButton>
-        <MudButton Variant="Variant.Text" Color="Color.Primary">Learn more</MudButton>
-    </MudCardActions> *@
-</MudCard>
+@code {
+
+    private readonly List<EventItem> _events =
+    [
+        new(1, "THE CHUM LINE", "img/chumline.png", "In the chum line, there is no ego. Only breath, water, and the predator.")
+    ];
+
+    private void NavigateToEvent(int id)
+    {
+        Nav.NavigateTo($"/events/{id}");
+    }
+
+    public record EventItem(int Id, string Title, string ImageUrl, string Description);
+}
