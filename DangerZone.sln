@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.37012.4 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DangerZone", "DangerZone\DangerZone.csproj", "{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DangerZone.Client", "DangerZone.Client\DangerZone.Client.csproj", "{EB78EDF1-A13B-4BB3-8422-B4C737E7003B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB78EDF1-A13B-4BB3-8422-B4C737E7003B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB78EDF1-A13B-4BB3-8422-B4C737E7003B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB78EDF1-A13B-4BB3-8422-B4C737E7003B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB78EDF1-A13B-4BB3-8422-B4C737E7003B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EBFFECE6-170E-4DF1-AA5E-5657A6B11772}
+	EndGlobalSection
+EndGlobal
