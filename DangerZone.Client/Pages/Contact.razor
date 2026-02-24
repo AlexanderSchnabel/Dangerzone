@@ -1,4 +1,5 @@
 ﻿@page "/contact"
+@using DangerZone.Sevices.DataAccess
 
 @rendermode InteractiveWebAssembly
 
@@ -78,6 +79,8 @@
             return;
 
         // TODO: Send data to backend / API
+        var bla = new FileDataAccess<ContactModel>("C:\\Users\\steve.meier\\source\\repos\\Dangerzone\\DangerZone\\Data");
+        bla.SetData("23da861668314602904b9b105ac24722",_model);
 
         Console.WriteLine($"Name: {_model.Name}");
         Console.WriteLine($"Email: {_model.Email}");
