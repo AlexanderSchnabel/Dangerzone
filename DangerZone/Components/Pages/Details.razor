@@ -1,0 +1,77 @@
+﻿@page "/events/{eventId:int}"
+@using MudBlazor
+
+<PageTitle>Event Details</PageTitle>
+
+@{
+    switch (EventId)
+    {
+        case 1:
+            {
+
+                <div class="event-details">
+                    <div class="hero">
+                        <img src="img/vulcano.png" />
+                    </div>
+
+                    <div class="meta">
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">MAGMA WALK</MudText>
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">STATUS: THERMAL THRESHOLD | DANGER LEVEL: 7/10</MudText>
+                        <MudText Typo="Typo.h4" Class="description">The Confrontation</MudText>
+                        <MudDivider Class="my-2" />
+                        <MudText Typo="Typo.body1" Class="description">
+                            Below your feet, the crust of the Earth is alive—a fragile skin over liquid fire. Magma Walk is your direct access to the planet's pulse, a meticulously planned traverse across a freshly cooled lava field while a live volcano roars its defiance in the night.
+                            The Experience
+                            Outfitted in bespoke thermal-reflection gear, you will step onto a landscape sculpted by unimaginable heat. Each crack in the obsidian crust reveals the searing, molten rock beneath, painting the ground in strokes of violent orange and red. The air hums with the energy of the earth, choked by mineral dust and thick with the scent of sulfur. In the background, a relentless volcanic fountain erupts, turning the night sky into a canvas of primal fury. This is a sensory overload: the oppressive heat, the shimmering air, the constant rumble that reverberates through your very core. You aren't just witnessing geology; you are walking on it, as it breathes.
+                            Why You Need This
+                            To stare into the heart of a world still being formed is to re-calibrate your own existence. Magma Walk strips away the illusion of stability and forces you to confront the raw, untamed power that sculpted our planet. It’s an immersion in creation and destruction, a journey that will leave you with an unparalleled understanding of your own resilience in the face of absolute elemental force.
+                        </MudText>
+                    </div>
+                </div>
+                break;
+            }
+    }
+
+}
+
+@code {
+
+    [Parameter]
+    public int EventId { get; set; }
+
+}
+
+<style>
+    .event-details {
+        max-width: 900px;
+        margin: 1.5rem auto;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        border-radius: 6px;
+        overflow: hidden;
+        background: white;
+    }
+
+    .hero img {
+        display: block;
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+    }
+
+    .meta {
+        padding: 1rem 1.25rem 1.5rem 1.25rem;
+    }
+
+    .title {
+        background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0));
+        padding: 0.25rem 0;
+        font-weight: 700;
+    }
+
+    .description {
+        color: #444;
+        line-height: 1.6;
+        margin-top: 0.5rem;
+    }
+
+</style>
