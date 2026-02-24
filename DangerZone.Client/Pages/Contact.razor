@@ -1,0 +1,139 @@
+﻿@page "/contact"
+
+@rendermode InteractiveWebAssembly
+
+<PageTitle>Get in contact with us</PageTitle>
+
+<h1>You want to know more? Get in contact right away</h1>
+
+<MudPaper Class="pa-6 mx-auto" MaxWidth="600px" Elevation="3">
+
+    <MudText Typo="Typo.h5" Class="mb-4">Contact Us</MudText>
+
+    <MudForm @ref="_form" @bind-IsValid="_isValid">
+
+        <!-- Name -->
+        <MudTextField T="string"
+                      Label="Name"
+                      @bind-Value="_model.Name"
+                      Required="true"
+                      RequiredError="Name is required"
+                      For="@(() => _model.Name)"
+                      Immediate="true"
+                      Validation="@ValidateName" />
+
+        <!-- Email -->
+        <MudTextField T="string"
+                      Label="Email"
+                      @bind-Value="_model.Email"
+                      Required="true"
+                      RequiredError="Email is required"
+                      For="@(() => _model.Email)"
+                      Immediate="true"
+                      Validation="@ValidateEmail" />
+
+        <!-- Message -->
+        <MudTextField T="string"
+                      Label="Your Question / Description"
+                      @bind-Value="_model.Message"
+                      Lines="5"
+                      TextArea="true"
+                      Required="true"
+                      RequiredError="Message is required"
+                      For="@(() => _model.Message)"
+                      Immediate="true"
+                      Validation="@ValidateMessage" />
+
+        <MudStack Row="true" Spacing="2" Class="mt-4">
+
+            <MudButton Variant="Variant.Filled"
+                       Color="Color.Primary"
+                       Disabled="!_isValid"
+                       OnClick="Submit">
+                Submit
+            </MudButton>
+
+            <MudButton Variant="Variant.Outlined"
+                       Color="Color.Secondary"
+                       OnClick="ResetAsync">
+                Reset
+            </MudButton>
+
+        </MudStack>
+
+    </MudForm>
+
+</MudPaper>
+
+@code {
+    private MudForm? _form;
+    private bool _isValid;
+    private ContactModel _model = new();
+
+    private async Task Submit()
+    {
+        await _form!.Validate();
+
+        if (!_isValid)
+            return;
+
+        // TODO: Send data to backend / API
+
+        Console.WriteLine($"Name: {_model.Name}");
+        Console.WriteLine($"Email: {_model.Email}");
+        Console.WriteLine($"Message: {_model.Message}");
+
+        await ResetAsync();
+    }
+
+    private async Task ResetAsync()
+    {
+        _model = new ContactModel();
+        await _form?.ResetAsync()!;
+    }
+
+    private string? ValidateName(string? name)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            return "Name is required";
+
+        if (name.Length < 3)
+            return "Name must be at least 3 characters";
+
+        return null;
+    }
+
+    private string? ValidateEmail(string? email)
+    {
+        if (string.IsNullOrWhiteSpace(email))
+            return "Email is required";
+
+        try
+        {
+            var addr = new System.Net.Mail.MailAddress(email);
+            return addr.Address == email ? null : "Invalid email address";
+        }
+        catch
+        {
+            return "Invalid email address";
+        }
+    }
+
+    private string? ValidateMessage(string? message)
+    {
+        if (string.IsNullOrWhiteSpace(message))
+            return "Message is required";
+
+        if (message.Length < 10)
+            return "Message must be at least 10 characters";
+
+        return null;
+    }
+
+    public class ContactModel
+    {
+        public string? Name { get; set; }
+        public string? Email { get; set; }
+        public string? Message { get; set; }
+    }
+}
