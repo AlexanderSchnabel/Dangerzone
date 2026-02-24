@@ -1,12 +1,110 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\steve.meier\\source\\repos\\Dangerzone\\",
-  "Documents": [],
+  "WorkspaceRootPath": "C:\\Projects\\Dangerzone\\Dangerzone\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}|DangerZone\\DangerZone.csproj|c:\\projects\\dangerzone\\dangerzone\\dangerzone\\components\\pages\\list.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}|DangerZone\\DangerZone.csproj|solutionrelative:dangerzone\\components\\pages\\list.razor||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}|DangerZone\\DangerZone.csproj|c:\\projects\\dangerzone\\dangerzone\\dangerzone\\dangerzone.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{63509A3D-C314-4B8B-BD27-B3A1D0CD0B4D}|DangerZone\\DangerZone.csproj|solutionrelative:dangerzone\\dangerzone.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DangerZone",
+              "DocumentMoniker": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\DangerZone.csproj",
+              "RelativeDocumentMoniker": "DangerZone\\DangerZone.csproj",
+              "ToolTip": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\DangerZone.csproj",
+              "RelativeToolTip": "DangerZone\\DangerZone.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-02-24T09:53:21.068Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "List.razor",
+              "DocumentMoniker": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\Components\\Pages\\List.razor",
+              "RelativeDocumentMoniker": "DangerZone\\Components\\Pages\\List.razor",
+              "ToolTip": "C:\\Projects\\Dangerzone\\Dangerzone\\DangerZone\\Components\\Pages\\List.razor",
+              "RelativeToolTip": "DangerZone\\Components\\Pages\\List.razor",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-02-24T09:51:25.853Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{13b12e3e-c1b4-4539-9371-4fe9a0d523fc}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:139:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
