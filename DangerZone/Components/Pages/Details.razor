@@ -1,0 +1,128 @@
+﻿@page "/events/{eventId:int}"
+@using MudBlazor
+
+<PageTitle>Event Details</PageTitle>
+
+@{
+    switch (EventId)
+    {
+        case 1:
+            {
+
+                <div class="event-details">
+                    <div class="hero">
+                        <img src="img/shark_large.png" />
+                    </div>
+
+                    <div class="meta">
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">THE CHUM LINE</MudText>
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">STATUS: CRITICAL EXPOSURE | DANGER LEVEL: 9/10</MudText>
+                        <MudText Typo="Typo.h4" Class="description">The Confrontation</MudText>
+                        <MudDivider Class="my-2" />
+                        <MudText Typo="Typo.body1" Class="description">
+                            There are no cages. There is no reinforced glass. There is only the thin membrane of a wetsuit between you and three tons of apex evolution. The Chum Line is a total immersion into the hunting grounds of the Great White shark.
+                            The Experience
+                            You will be deployed into the deep blue of the Neptune Islands, suspended in a "drift" where the scent of the chum line is strongest. As the visibility fluctuates, you will witness the haunting silence of the open ocean—interrupted only by the massive, blurred silhouette of a predator gliding inches from your space. This isn't about watching a shark; it’s about feeling the pressure displacement of its movement and the weight of its gaze.
+                            Why You Need This
+                            Most people live their entire lives without ever knowing what it feels like to be truly hunted. The Chum Line strips away your status as a modern human and returns you to a primal state of pure, crystalline awareness. You will find out exactly who you are when you are no longer the one in control.
+                        </MudText>
+                    </div>
+                </div>
+                break;
+            }
+
+            case 2:
+            {
+
+                <div class="event-details">
+                    <div class="hero">
+                        <img src="img/vulcano_large.png" />
+                    </div>
+
+                    <div class="meta">
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">MAGMA WALK</MudText>
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">STATUS: THERMAL THRESHOLD | DANGER LEVEL: 7/10</MudText>
+                        <MudText Typo="Typo.h4" Class="description">The Confrontation</MudText>
+                        <MudDivider Class="my-2" />
+                        <MudText Typo="Typo.body1" Class="description">
+                            Below your feet, the crust of the Earth is alive—a fragile skin over liquid fire. Magma Walk is your direct access to the planet's pulse, a meticulously planned traverse across a freshly cooled lava field while a live volcano roars its defiance in the night.
+                            The Experience
+                            Outfitted in bespoke thermal-reflection gear, you will step onto a landscape sculpted by unimaginable heat. Each crack in the obsidian crust reveals the searing, molten rock beneath, painting the ground in strokes of violent orange and red. The air hums with the energy of the earth, choked by mineral dust and thick with the scent of sulfur. In the background, a relentless volcanic fountain erupts, turning the night sky into a canvas of primal fury. This is a sensory overload: the oppressive heat, the shimmering air, the constant rumble that reverberates through your very core. You aren't just witnessing geology; you are walking on it, as it breathes.
+                            Why You Need This
+                            To stare into the heart of a world still being formed is to re-calibrate your own existence. Magma Walk strips away the illusion of stability and forces you to confront the raw, untamed power that sculpted our planet. It’s an immersion in creation and destruction, a journey that will leave you with an unparalleled understanding of your own resilience in the face of absolute elemental force.
+                        </MudText>
+                    </div>
+                </div>
+                break;
+            }
+    
+        case 3:
+            {
+
+                <div class="event-details">
+                    <div class="hero">
+                        <img src="img/abyss_large.jpg" />
+                    </div>
+
+                    <div class="meta">
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">THE ABYSS</MudText>
+                        <MudText Typo="Typo.h3" Class="title" Color="Color.Primary">STATUS: CATACLYSMIC CURRENT | DANGER LEVEL: 8/10</MudText>
+                        <MudText Typo="Typo.h4" Class="description">The Confrontation</MudText>
+                        <MudDivider Class="my-2" />
+                        <MudText Typo="Typo.body1" Class="description">
+                            Below you, the river itself disappears. The Abyss is not merely a rapid; it is a geological maw where millions of gallons of water per second plunge into a chaotic, churning void. This is your descent into the unbridled, untamed power of the Congo River.
+                            The Experience
+                            Strapped into a hardened tactical kayak, your perspective narrows to the thundering wall of white water directly ahead. The roar is deafening, the spray a blinding assault on the "lens." As your bow buries into the cascading foam, you are no longer paddling—you are falling, propelled by a force that dwarfs human will. Every nerve ending is alive, screaming in symphony with the river as you are swallowed by the liquid thunder. This is a battle for control where the river makes the rules, and your survival hinges on instinct, training, and the raw, unyielding power of the current.
+                            Why You Need This
+                            In The Abyss, the civilized world is stripped away. You are confronted with a force so vast, so indifferent, that it demands absolute surrender and absolute defiance simultaneously. This experience isn't about conquering nature; it’s about confronting its true scale and finding out if your spirit can ride the thunder. When you emerge, battered but unbroken, you will carry the visceral knowledge of a power few ever truly face.
+                            </MudText>
+                    </div>
+                </div>
+                break;
+            }
+
+    }
+
+}
+
+@code {
+
+    [Parameter]
+    public int EventId { get; set; }
+
+}
+
+<style>
+    .event-details {
+        max-width: 900px;
+        margin: 1.5rem auto;
+        box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+        border-radius: 6px;
+        overflow: hidden;
+        background: white;
+    }
+
+    .hero img {
+        display: block;
+        width: 100%;
+        height: 420px;
+        object-fit: cover;
+    }
+
+    .meta {
+        padding: 1rem 1.25rem 1.5rem 1.25rem;
+    }
+
+    .title {
+        background: linear-gradient(90deg, rgba(255,255,255,0.0), rgba(255,255,255,0.0));
+        padding: 0.25rem 0;
+        font-weight: 700;
+    }
+
+    .description {
+        color: #444;
+        line-height: 1.6;
+        margin-top: 0.5rem;
+    }
+
+</style>
